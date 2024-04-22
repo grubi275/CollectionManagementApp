@@ -1,0 +1,12 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionManagementApp.AddItemPage">
+
+    <StackLayout>
+        <Entry Placeholder="Name" x:Name="NameEntry"/>
+        <Entry Placeholder="Description" x:Name="DescriptionEntry"/>
+        <Button Text="Save" Clicked="SaveButton_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>

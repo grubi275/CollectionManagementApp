@@ -1,0 +1,23 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionManagementApp.CollectionPage">
+
+    <StackLayout>
+        <Label Text="{Binding Name}" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,20,0,10"/>
+
+        <Button Text="Add Item" Clicked="AddItemButton_Clicked"/>
+
+        
+        <CollectionView x:Name="CollectionItemsListView" ItemsSource="{Binding Items}" SelectionMode="Single" SelectionChanged="CollectionItemsListView_SelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Name}" FontSize="Medium" HorizontalOptions="StartAndExpand"/>
+                        <Label Text="{Binding Description}" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="Gray"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionManagementApp.MainPage">
+
+    <StackLayout>
+        <Button Text="Add Collection" Clicked="AddCollectionButton_Clicked"/>
+        <CollectionView x:Name="CollectionListView" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Tapped="CollectionItem_Clicked"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Label Text="Existing Collections:" FontSize="Large" HorizontalOptions="Center"/>
+        <StackLayout x:Name="ExistingCollectionsStackLayout" Padding="10"/>
+    </StackLayout>
+
+</ContentPage>
